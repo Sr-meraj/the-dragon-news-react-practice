@@ -1,20 +1,22 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 import Footer from "../Pages/Shared/Footer/Footer";
 import Header from "../Pages/Shared/Header/Header";
+import { Col, Container, Row } from "react-bootstrap";
 import LeftSideBar from "../Pages/Shared/LeftSideBar/LeftSideBar";
 import RightSideBar from "../Pages/Shared/RightSideBar/RightSideBar";
-
+import NavigationBar from "../Pages/Shared/NavigationBar/NavigationBar";
 const Main = () => {
     return (
         <div>
             <Header />
+            <NavigationBar />
             <Container>
                 <Row>
                     <Col lg={3}>
                         <LeftSideBar />
                     </Col>
                     <Col lg={6}>
-                        <h1>Main content</h1>
+                        <Outlet />
                     </Col>
                     <Col lg={3}>
                         <RightSideBar />

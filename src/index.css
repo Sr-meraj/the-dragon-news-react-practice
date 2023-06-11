@@ -1,0 +1,18 @@
+* {
+    font-family: 'Poppins';
+}
+
+.list-group-item.active {
+    background: #E7E7E7 !important;
+}
+
+.text-truncate-container {
+    width: 100%;
+}
+
+.text-truncate-container p {
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
