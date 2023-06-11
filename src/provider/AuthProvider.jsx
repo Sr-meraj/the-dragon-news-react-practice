@@ -48,7 +48,6 @@ const AuthProvider = ({ children }) => {
     // objerv authState changed
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('Auth state change', currentUser);
             setUser(currentUser)
             setLoading(false)
         })

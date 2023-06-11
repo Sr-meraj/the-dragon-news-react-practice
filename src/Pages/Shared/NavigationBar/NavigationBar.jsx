@@ -6,7 +6,6 @@ import { AuthContext } from "../../../provider/AuthProvider";
 
 const NavigationBar = () => {
     const { user, logout } = useContext(AuthContext);
-    console.log('header', user);
     const SignOut = () => {
         logout().then(() => { }).catch(err => console.error(err))
         console.log('clicked');

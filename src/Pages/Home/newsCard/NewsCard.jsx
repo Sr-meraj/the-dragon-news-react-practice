@@ -2,7 +2,8 @@ import moment from "moment/moment";
 import { Card, Image } from "react-bootstrap";
 import { BsEyeFill, BsShare, BsStar, BsStarFill } from "react-icons/bs";
 import { RxBookmarkFilled } from "react-icons/rx";
-import Rating from "react-rating";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 import { Link } from "react-router-dom";
 const NewsCard = ({ news }) => {
     const { author, title, details, rating, total_view, image_url, _id } = news;
@@ -43,15 +44,13 @@ const NewsCard = ({ news }) => {
                         <div className="d-flex align-items-center fs-6 gap-2">
                             <div className="stars text-warning">
                                 <Rating
-                                    placeholderRating={rating.number}
-                                    emptySymbol={<BsStar />}
-                                    placeholderSymbol={<BsStarFill />}
-                                    fullSymbol={<BsStarFill />}
-                                    readonly
+                                    value={rating?.number}
+                                    readOnly
+                                    style={{ maxWidth: 100 }}
                                 />
                             </div>
                             <h5 className="mb-0">
-                                {rating.number}
+                                {rating?.number}
                             </h5>
                         </div>
                         <div className="d-flex align-items-center fs-6 gap-2">

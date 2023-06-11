@@ -16,7 +16,6 @@ const Login = () => {
         const password = form.password.value;
 
         SignIn(email, password).then(e => {
-            console.log(e.user);
             if (e.user) {
                 navigate(from, { replace: true });
             }
